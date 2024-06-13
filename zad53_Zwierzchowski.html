@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 53</title>
+    <script>
+        function okno_zamknij_Zwierzchowski()
+        {
+            window.close()
+        }
+    </script>
+</head>
+<body>
+    <div id="rysunek" class="gwiazdki"></div>
+
+    <script>
+        function rysujProstokat() {
+            var a_ZWI = parseInt(prompt('Podaj wysokość prostokąta (a):'));
+            var b_ZWI = parseInt(prompt('Podaj szerokość prostokąta (b):'));
+
+            if (isNaN(a_ZWI) || isNaN(b_ZWI) || a_ZWI < 2 || b_ZWI < 2) {
+                alert('Podaj poprawne wymiary większe lub równe 2.');
+                return;
+            }
+
+            var rysunek_ZWI = document.getElementById('rysunek');
+            rysunek_ZWI.innerHTML = '';
+
+            var gornaLinia_ZWI = '';
+            for (var i = 0; i < b_ZWI; i++) {
+                gornaLinia_ZWI += '*';
+            }
+            rysunek_ZWI.innerHTML += gornaLinia_ZWI + '<br>';
+
+            var wiersz_ZWI = '*';
+            for (var i = 1; i <= (b_ZWI - 2); i++) {
+                wiersz_ZWI += '&nbsp;&nbsp;';
+            }
+            wiersz_ZWI += '*';
+            for (var i = 1; i <= (a_ZWI - 2); i++) {
+                rysunek_ZWI.innerHTML += wiersz_ZWI + '<br>';
+            }
+
+            var dolnaLinia_ZWI = '';
+            for (var i = 0; i < b_ZWI; i++) {
+                dolnaLinia_ZWI += '*';
+            }
+            rysunek_ZWI.innerHTML += dolnaLinia_ZWI;
+        }
+
+        window.onload = rysujProstokat;
+    </script>
+    <br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_Zwierzchowski()"/>
+</body>
+</html>

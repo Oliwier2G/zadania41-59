@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function okno_zamknij_Zwierzchowski()
+        {
+            window.close()
+        }
+        var a_ZWI = 5;
+        var b_ZWI = 25;
+    </script>
+</head>
+<body>
+    <script>
+        for(var i=1; i<b_ZWI; i++){
+            document.write("*");
+        }
+        for(var i=-1; i<a_ZWI; i++){
+            document.write("*" + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "*" + "<br>");
+        }
+        for(var i=1; i<b_ZWI ; i++){
+            document.write("*");
+        }
+    </script>
+    <br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_Zwierzchowski()"/>
+</body>
+</html>
